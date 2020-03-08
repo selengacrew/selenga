@@ -7,4 +7,5 @@
   (lib (name relay)(type Legacy)(uri ${KIPRJMOD}/symbols/Relay.lib)(options "")(descr ""))
   (lib (name conn_generic)(type Legacy)(uri ${KIPRJMOD}/symbols/Connector_Generic.lib)(options "")(descr ""))
   (lib (name power)(type Legacy)(uri /home/aanper/project/selenga/symbols/power.lib)(options "")(descr ""))
+  (lib (name motor)(type Legacy)(uri /home/aanper/project/selenga/symbols/Motor.lib)(options "")(descr ""))
 )
