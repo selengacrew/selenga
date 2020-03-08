@@ -286,8 +286,6 @@ Wire Wire Line
 Wire Wire Line
 	28050 14600 28200 14600
 Wire Bus Line
-	28600 18150 19700 18150
-Wire Bus Line
 	19700 18150 19700 20700
 Wire Bus Line
 	19700 20700 11200 20700
@@ -318,18 +316,8 @@ Wire Wire Line
 Connection ~ 25850 15150
 Wire Wire Line
 	25850 15150 25850 18350
-Entry Wire Line
-	28500 16400 28600 16500
-Entry Wire Line
-	28500 16500 28600 16600
-Wire Wire Line
-	28500 16500 27400 16500
-Wire Wire Line
-	27400 16500 27400 15750
 Wire Wire Line
 	27400 15750 27550 15750
-Wire Wire Line
-	28500 16400 28250 16400
 Wire Wire Line
 	28250 16400 28250 16200
 Wire Wire Line
@@ -337,10 +325,6 @@ Wire Wire Line
 Connection ~ 28200 16200
 Text Label 28400 16400 0    50   ~ 0
 (-)
-Text Label 28400 16500 0    50   ~ 0
-(+)
-Text Label 28600 17000 1    50   ~ 0
-брашпиль
 Wire Wire Line
 	24650 16350 25450 16350
 Connection ~ 25450 16350
@@ -383,7 +367,7 @@ Wire Wire Line
 Connection ~ 28200 13800
 Text Notes 25250 14650 0    50   ~ 10
 TODO: заменить на пакетный переключатель
-Text Notes 26400 16900 0    50   ~ 10
+Text Notes 26200 16900 0    50   ~ 10
 TODO: нормальная шина 0V
 Text Label 28400 13700 0    50   ~ 0
 red
@@ -984,8 +968,35 @@ Wire Wire Line
 	23350 16600 23500 16600
 Wire Wire Line
 	23500 16500 23500 16600
+Text Notes 25100 12050 0    50   ~ 10
+TODO: добавить линейный преобразователь на схему
+Wire Wire Line
+	28500 16400 28250 16400
 Wire Bus Line
-	28600 16450 28600 18150
+	28600 18150 19700 18150
+Text Label 28600 17000 1    50   ~ 0
+брашпиль
+Entry Wire Line
+	28500 16400 28600 16500
+Text Label 28400 17250 0    50   ~ 0
+(+)
+Entry Wire Line
+	28500 17250 28600 17350
+Wire Wire Line
+	28500 17250 27400 17250
+$Comp
+L device:CircuitBreaker_1P CB1
+U 1 1 5EA39667
+P 27400 16950
+F 0 "CB1" H 27453 16996 50  0000 L CNN
+F 1 "C63" H 27453 16905 50  0000 L CNN
+F 2 "" H 27400 16950 50  0001 C CNN
+F 3 "" H 27400 16950 50  0001 C CNN
+	1    27400 16950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	27400 15750 27400 16650
 Wire Bus Line
 	28650 10050 28650 13800
 Wire Bus Line
@@ -1001,7 +1012,7 @@ Wire Bus Line
 Wire Bus Line
 	18900 15700 18900 16100
 Wire Bus Line
+	28600 16450 28600 18150
+Wire Bus Line
 	28700 19350 28700 20600
-Text Notes 25100 12050 0    50   ~ 10
-TODO: добавить линейный преобразователь на схему
 $EndSCHEMATC
